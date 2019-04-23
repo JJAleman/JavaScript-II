@@ -44,26 +44,41 @@ last(items, (last) =>
 function add(x, y) {
   return x + y;
 }
+
 function sumNums(x, y, cb) {
-  return cb(x , y)
+  return cb(x, y)
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
-console.log(sumNums(2,4,add))
+console.log(sumNums(2, 4, add))
 
 
-function multiply (x, y){
+function multiply(x, y) {
   return x * y;
 }
+
 function multiplyNums(x, y, cb) {
-  return cb(x,y)
+  return cb(x, y)
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
-console.log(multiplyNums(3,5, multiply))
+console.log(multiplyNums(3, 5, multiply))
 
-function contains(item, list, cb) {
+
+function checkItems(item, items) {
+  for (let i = 0; i < items.length; i++) {
+    if (item.includes('yo-yo')) {
+      console.log('True')
+    } else {
+      console.log('False')
+    }
+  }
+};
+
+function contains(item, items, cb) {
+  return cb(item, items)
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
+console.log(contains)
 
 /* STRETCH PROBLEM */
 
